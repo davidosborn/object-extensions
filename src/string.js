@@ -1,12 +1,20 @@
 /**
- * Capitalizes the first character in a string.
- * @param {string} s - The string.
+ * Capitalizes the first character in the string.
  * @return {string} The capitalized string.
  */
-String.capitalize = function(s) {
-	return s.length > 0
-		? s[0].toUpperCase() + s.substring(1)
-		: s
+String.prototype.capitalize = function() {
+	return this.length > 0
+		? this[0].toUpperCase() + this.substring(1)
+		: this
+}
+
+/**
+ * Determines whether the string is equal to another case, without case sensitivity.
+ * @param {string} other - The other string.
+ * @return {boolean} @c true if the string is equal; otherwise, @c false.
+ */
+String.prototype.isEqualIgnoreCase = function(other) {
+	return this.localeCompare(other, undefined, {sensitivity: 'base'}) === 0
 }
 
 /**
