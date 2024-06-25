@@ -1,0 +1,9 @@
+/dist
+/doc/jsdoc
+/node_modules
+/npm-debug.log
+/yarn-error.log
+
+# Exclude the package lock files because the version numbers of our dependencies are hard coded.
+/package-lock.json
+/yarn.lock

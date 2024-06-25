@@ -1,0 +1,48 @@
+{
+	"name": "@davidosborn/object-extensions",
+	"version": "0.0.0",
+	"description": "Object extensions.",
+	"keywords": [
+		"extensions",
+		"object",
+		"shims"
+	],
+	"homepage": "https://github.com/davidosborn/object-extensions#readme",
+	"bugs": {
+		"url": "https://github.com/davidosborn/object-extensions/issues",
+		"email": "davidcosborn@gmail.com"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "David Osborn",
+		"email": "davidcosborn@gmail.com",
+		"url": "http://osborn.industries/"
+	},
+	"files": [
+		"doc",
+		"src"
+	],
+	"main": "src/index.js",
+	"directories": {
+		"doc": "doc/jsdoc"
+	},
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davidosborn/object-extensions"
+	},
+	"scripts": {
+		"clean": "rm -rf doc/jsdoc",
+		"distclean": "npm run clean && rm -rf node_modules package-lock.json",
+		"doc": "npx jsdoc -c jsdoc.json -d doc/jsdoc -r README.md src",
+		"lint": "npx eslint src",
+		"prepublishOnly": "npm run clean && npm run doc"
+	},
+	"devDependencies": {
+		"@eslint/js": "9.3.0",
+		"eslint": "9.3.0",
+		"eslint-plugin-jsdoc": "48.2.5",
+		"globals": "15.3.0",
+		"jsdoc": "4.0.3"
+	}
+}
